@@ -16,17 +16,22 @@
     --texto-primario: #000000;
 }
 header{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
     background-color: #FAD1D9;
     color: #000000;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 4px solid var(--color-secundario);
 }
 .Login{
     font-size: var(--tamanho-fonte-secundario);
-    margin-right: 15px;
     text-align: center;
+
 }   
 .Logo{
-    margin-left: 10px;
+
 }
