@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Adicionar Imagens</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    input, button { margin: 5px; padding: 8px; }
+    img { max-height: 100px; margin: 5px; display: block; }
+  </style>
+</head>
+<body>
+
+  <h2>Adicionar nova imagem</h2>
+  <img src="./../img/image (1).png" alt="">
+  <label>
+    URL da imagem:
+    <input type="text" id="srcInput" placeholder="Ex: ./img/image.png">
+  </label><br>
+
+  <label>
+    Texto descritivo:
+    <input type="text" id="textoInput" placeholder="Ex: Texto da imagem">
+  </label><br>
+
+  <button onclick="adicionarImagem()">Adicionar</button>
+
+  <h3>Imagens adicionadas:</h3>
+  <div id="galeria"></div>
+
+  <script>
+    const imagens = [
+      { src: "./../img/image (1).png", texto: "Texto 1" },
+      { src: "./../img/image (2).png", texto: "Texto 2" },
+      { src: "./../img/image (3).png", texto: "Texto 3" }
+    ];
+
+    function renderizarGaleria() {
+      const galeria = document.getElementById("galeria");
+      galeria.innerHTML = ""; // limpa antes de renderizar
+
+      imagens.forEach(({ src, texto }) => {
+        const div = document.createElement("div");
+        div.innerHTML = `<img src="${src}" alt="${texto}"><p>${texto}</p>`;
+        galeria.appendChild(div);
+      });
+    }
+
+    function adicionarImagem() {
+      const src = document.getElementById("srcInput").value;
+      const texto = document.getElementById("textoInput").value;
+
+      if (src && texto) {
+        imagens.push({ src, texto });
+        renderizarGaleria();
+        document.getElementById("srcInput").value = "";
+        document.getElementById("textoInput").value = "";
+      } else {
+        alert("Preencha ambos os campos!");
+      }
+    }
+
+    // Inicializa com imagens existentes
+    renderizarGaleria();
+  </script>
+
+</body>
+</html>
