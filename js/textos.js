@@ -13,7 +13,7 @@ imagens.forEach((item, i) => {
   html += `
     <div class="card">
         <div ${i+1}"><img src="${item.src}" alt=""></div>
-        <span></span>
+        <span class="spa"></span>
         <div ${i+1}"><h1>${item.texto}</h1></div>
     </div>
   `;

@@ -13,7 +13,6 @@
     --tamanho-fonte-padrao: 20px;
     --tamanho-fonte-secundario: 10px;
     /* --tamanho-fonte-titulo: 12px; */
-    --texto-primario: #000000;
 }
 header{
     margin-bottom: 25px; 
@@ -21,7 +20,7 @@ header{
     padding-bottom: 15px;
     padding-left: 15px;
     padding-right: 15px;
-    background-color: #FAD1D9;
+    background-color: var(--color-primario);
     color: #000000;
     display: flex;
     align-items: center;
@@ -56,10 +55,10 @@ header{
     padding: 10px 10px 5px 10px;
     border-radius: 20px; 
 }
-span{
+.spa{
     margin: 20px;
 }
-a {
+.Link{
   color: inherit;
   text-decoration: none;
 }
