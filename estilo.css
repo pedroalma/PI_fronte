@@ -11,7 +11,7 @@
     /* texto */
     --fonte-padrao: 'Playfair Display';
     --tamanho-fonte-padrao: 20px;
-    --tamanho-fonte-secundario: 8px;
+    --tamanho-fonte-secundario: 10px;
     /* --tamanho-fonte-titulo: 12px; */
     --texto-primario: #000000;
 }
@@ -44,7 +44,7 @@ header{
 .Login{
     font-size: var(--tamanho-fonte-secundario);
     text-align: center;
-
+    font-weight: 100;
 }   
 .card{
     display: flex;
@@ -59,6 +59,10 @@ header{
 span{
     margin: 20px;
 }
+a {
+  color: inherit;
+  text-decoration: none;
+}
 .card img{
     width: 500px;
 } 
@@ -66,7 +70,6 @@ span{
     width: 90%;
     font-size: var(--tamanho-fonte-padrao);
     font-weight: 500;
-    
 }
 #conteudo{
     display: flex;
