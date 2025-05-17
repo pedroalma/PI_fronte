@@ -10,13 +10,13 @@
     --color-secundario: #4C000F;
     /* texto */
     --fonte-padrao: 'Playfair Display';
-    --tamanho-fonte-padrao: 27px;
+    --tamanho-fonte-padrao: 20px;
     --tamanho-fonte-secundario: 8px;
     /* --tamanho-fonte-titulo: 12px; */
     --texto-primario: #000000;
 }
 header{
-    margin-bottom: 55px;
+    margin-bottom: 25px; 
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 15px;
@@ -28,15 +28,48 @@ header{
     justify-content: space-between;
     border-bottom: 4px solid var(--color-secundario);
 }
+.texto{
+    flex: 1; 
+    text-align: center;
+}
+.rodape{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px; 
+    background-color: var(--color-primario);
+    border-top: 4px solid var(--color-secundario);
+}
 .Login{
     font-size: var(--tamanho-fonte-secundario);
     text-align: center;
 
 }   
-.Logo{
-
-}
 .card{
     display: flex;
     margin-top: 20px;
+    background-color: var(--color-primario);
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%; 
+    padding: 10px 10px 5px 10px;
+    border-radius: 20px; 
+}
+span{
+    margin: 20px;
+}
+.card img{
+    width: 500px;
+} 
+.card h1{
+    width: 90%;
+    font-size: var(--tamanho-fonte-padrao);
+    font-weight: 500;
+    
+}
+#conteudo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }

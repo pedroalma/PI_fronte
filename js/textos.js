@@ -12,11 +12,11 @@ let html = "";
 imagens.forEach((item, i) => {
   html += `
     <div class="card">
-        <div id="imgj"${i+1}"><img src="${item.src}" alt=""></div>
-        <div id="h1j"${i+1}">${item.texto}</div>
+        <div ${i+1}"><img src="${item.src}" alt=""></div>
+        <span></span>
+        <div ${i+1}"><h1>${item.texto}</h1></div>
     </div>
   `;
 });
 
 document.getElementById("conteudo").innerHTML = html;
-document.body.style.overflowX = "hidden";
