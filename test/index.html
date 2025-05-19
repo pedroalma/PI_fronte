@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Criar e abrir páginas</title>
+</head>
+<body>
+    <h1>Criar e abrir páginas</h1>
+    <button onclick="abrirPagina()">Abrir páginas</button>
+
+    <script>
+        function abrirPagina() {
+            const htmlContent = `
+                <html>
+                <head><title>Página Nova</title></head>
+                <body>
+                    <h1>Conteúdo da nova página</h1>
+                    <p>Esta página foi criada dinamicamente via JavaScript.</p>
+                </body>
+                </html>
+            `;
+            const newWindow = window.open('', '_blank');
+            newWindow.document.write(htmlContent);
+            newWindow.document.close();
+        }
+    </script>
+</body>
+</html>

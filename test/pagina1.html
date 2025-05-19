@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Visualização</title>
+</head>
+<body>
+  <h1>Imagens Enviadas</h1>
+  <div id="galeria"></div>
+
+  <script>
+    const dadosImagens = JSON.parse(localStorage.getItem("dadosImagens")) || [];
+    const galeria = document.getElementById("galeria");
+
+    if (dadosImagens.length > 0) {
+      dadosImagens.forEach(item => {
+        const div = document.createElement("div");
+        div.innerHTML = `
+          <a href="${item.link}">
+            <img src="${item.src}" alt="Imagem" style="width:150px">
+            <p>${item.texto}</p>
+          </a>
+          <hr>
+        `;
+        galeria.appendChild(div);
+      });
+    } else {
+      galeria.innerHTML = "<p>Nenhuma imagem enviada ainda.</p>";
+    }
+  </script>
+</body>
+</html>

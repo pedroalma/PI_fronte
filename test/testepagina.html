@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Abrir páginas automaticamente</title>
+</head>
+<body>
+  <h1>Abrir páginas automaticamente</h1>
+  <button onclick="abrirPaginas()">Abrir páginas</button>
+
+  <script>
+    const imagens = [
+      {
+        link: "./testlink.html",
+        src: "./img/image (1).png",
+        texto: "Unha stiletto: ousada e glamourosa."
+      },
+      {
+        link: "./testlink.html",
+        src: "./img/image (2).png",
+        texto: "Unha bailarina: lembra uma sapatilha de balé."
+      },
+      {
+        link: "./testlink.html",
+        src: "./img/image (3).png",
+        texto: "Unha amendoada: meio termo entre oval e stiletto."
+      },
+      {
+        link: "./testlink.html",
+        src: "./img/image (4).png",
+        texto: "Unha quadrada: formato clássico e resistente."
+      }
+    ];
+
+    function abrirPaginas() {
+      imagens.forEach((item, index) => {
+        const novaJanela = window.open("", "_blank");
+
+        if (novaJanela) {
+          novaJanela.document.open();
+          novaJanela.document.write(`
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Unha ${index + 1}</title>
+</head>
+<body>
+  <h1>Unha ${index + 1}</h1>
+  <img src="${item.src}" alt="Imagem ${index + 1}" style="width:200px"><br><br>
+  <p>${item.texto}</p>
+  <a href="${item.link}">Ver mais</a>
+</body>
+</html>
+          `);
+          novaJanela.document.close();
+        } else {
+          alert("O navegador bloqueou o pop-up. Permita pop-ups para este site.");
+        }
+      });
+    }
+  </script>
+</body>
+</html>

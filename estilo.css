@@ -70,7 +70,9 @@ header{
     font-size: var(--tamanho-fonte-padrao);
     font-weight: 500;
 }
-#conteudo{
+.conteudo{
+    text-decoration: none;
+    color:#000000;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

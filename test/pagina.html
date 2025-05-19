@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário</title>
+</head>
+<body>
+  <h1>Adicionar Imagem</h1>
+  <form id="formImagem">
+    <label>Link:</label><br>
+    <input type="text" id="link" required><br><br>
+
+    <label>Imagem (caminho ou URL):</label><br>
+    <input type="text" id="src" required><br><br>
+
+    <label>Texto:</label><br>
+    <textarea id="texto" required></textarea><br><br>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <script>
+    document.getElementById("formImagem").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const link = document.getElementById("link").value;
+      const src = document.getElementById("src").value;
+      const texto = document.getElementById("texto").value;
+
+      const novaImagem = { link, src, texto };
+
+      // Recupera imagens antigas ou inicia array vazio
+      const imagensSalvas = JSON.parse(localStorage.getItem("dadosImagens")) || [];
+
+      // Adiciona a nova imagem
+      imagensSalvas.push(novaImagem);
+
+      // Salva novamente no localStorage
+      localStorage.setItem("dadosImagens", JSON.stringify(imagensSalvas));
+
+      // Redireciona para a página de visualização
+      window.location.href = "visualizacao.html";
+    });
+  </script>
+</body>
+</html>
