@@ -1,0 +1,222 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #FFF0F5; /* Light pink background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    min-height: 100vh;
+    padding-top: 20px; /* Add some padding at the top */
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    background-color: #FFFAFA; /* Slightly off-white for main content area */
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden; /* Ensures child border-radius is respected */
+}
+
+/* Left Column: Styles List */
+.styles-list-container {
+    width: 35%;
+    padding: 20px;
+    background-color: #FFEFF2; /* Light pink variant for the aside */
+    border-right: 1px solid #FADADD;
+}
+
+.styles-list-container h2 {
+    text-align: center;
+    color: #D16086;
+    margin-bottom: 20px;
+}
+
+.style-item {
+    display: flex;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 10px;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.style-item img {
+    width: 100px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+
+.style-item-info {
+    flex-grow: 1;
+}
+
+.style-item-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+    color: #BF5A7F;
+}
+
+.style-item-info p {
+    font-size: 0.85em;
+    color: #555;
+    margin: 0 0 10px 0;
+    line-height: 1.4;
+    /* Limit description lines shown */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.style-item-info .btn-see-more {
+    background-color: #D16086;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8em;
+    transition: background-color 0.3s ease;
+}
+
+.style-item-info .btn-see-more:hover {
+    background-color: #BF5A7F;
+}
+
+/* Right Column: Style Detail */
+.style-detail-container {
+    width: 65%;
+    padding: 20px;
+    background-color: #fff; /* White background for the detail section */
+}
+
+.style-detail img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+}
+
+.detail-info h1 {
+    font-size: 2em;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-transform: lowercase; /* As seen in "stiletto" */
+}
+
+.detail-info p {
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.price-rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding: 10px;
+    background-color: #FFF7F9;
+    border-radius: 4px;
+}
+
+.price {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #D16086;
+}
+
+.rating {
+    font-size: 1.2em;
+    color: #FFD700; /* Gold for stars */
+}
+.rating .star.filled {
+    color: #FFD700;
+}
+.rating .star.empty {
+    color: #ccc;
+}
+
+
+.actions .btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-right: 10px;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.actions .btn-primary {
+    background-color: #D16086;
+    color: white;
+}
+
+.actions .btn-primary:hover {
+    background-color: #BF5A7F;
+}
+
+.actions .btn-secondary {
+    background-color: #F0F0F0; /* Lighter background */
+    color: #D16086;
+    border: 1px solid #D16086;
+}
+
+.actions .btn-secondary:hover {
+    background-color: #E0E0E0;
+    opacity: 0.9;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+        border-radius: 0;
+    }
+    .styles-list-container, .style-detail-container {
+        width: 100%;
+        border-right: none;
+        padding: 15px;
+    }
+    .style-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .style-item img {
+        width: 100%;
+        height: 150px; /* Adjust height for stacked layout */
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .style-item-info p {
+        -webkit-line-clamp: 3; /* Allow more lines on smaller screens */
+    }
+    .price-rating {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .price {
+        margin-bottom: 5px;
+    }
+    .actions .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .actions .btn:last-child {
+        margin-bottom: 0;
+    }
+}

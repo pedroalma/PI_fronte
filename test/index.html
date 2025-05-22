@@ -2,27 +2,38 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Criar e abrir páginas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nail Styles</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Criar e abrir páginas</h1>
-    <button onclick="abrirPagina()">Abrir páginas</button>
+    <div class="container">
+        <aside class="styles-list-container">
+            <h2>Estilos Populares</h2>
+            <div class="styles-list">
+                </div>
+        </aside>
 
-    <script>
-        function abrirPagina() {
-            const htmlContent = `
-                <html>
-                <head><title>Página Nova</title></head>
-                <body>
-                    <h1>Conteúdo da nova página</h1>
-                    <p>Esta página foi criada dinamicamente via JavaScript.</p>
-                </body>
-                </html>
-            `;
-            const newWindow = window.open('', '_blank');
-            newWindow.document.write(htmlContent);
-            newWindow.document.close();
-        }
-    </script>
+        <main class="style-detail-container">
+            <div class="style-detail">
+                <img src="https://via.placeholder.com/400x300/FFE4E1/333?text=Selecione+um+estilo" alt="Nail Style" id="detail-image">
+                <div class="detail-info">
+                    <h1 id="detail-name">Selecione um Estilo</h1>
+                    <p id="detail-description">Escolha um estilo na lista ao lado para ver os detalhes.</p>
+                    <div class="price-rating">
+                        <p class="price" id="detail-price">R$ 0,00</p>
+                        <div class="rating" id="detail-rating">
+                            </div>
+                    </div>
+                    <div class="actions">
+                        <button class="btn btn-primary">Agendar serviço</button>
+                        <button class="btn btn-secondary">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
