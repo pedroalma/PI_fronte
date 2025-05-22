@@ -6,8 +6,11 @@
 }
 :root{
     /* cor */
+    --branco: #fff;
+    --preto: #000;
     --color-primario: #FAD1D9;
     --color-secundario: #4C000F;
+    --color-terciaria: #8D4E5B;
     /* texto */
     --fonte-padrao: 'Playfair Display';
     --tamanho-fonte-padrao: 20px;
@@ -66,7 +69,7 @@ header{
     width: 500px;
 } 
 .card h1{
-    width: 90%;
+    /* width: 90%; */
     font-size: var(--tamanho-fonte-padrao);
     font-weight: 500;
 }
@@ -76,4 +79,21 @@ header{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+.DivText{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.DivTextH1{
+    background-color: var(--color-terciaria);
+    color:var(--branco);
+    width: 100px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
 }

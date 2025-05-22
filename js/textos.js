@@ -14,8 +14,13 @@ imagens.forEach((item, i) => {
   <a href="${item.link}" class="conteudo">
     <div class="card">
         <div ${i+1}"><img src="${item.src}" alt=""></div>
-        <span class="spa"></span>
-        <div ${i+1}"><h1>${item.texto}</h1></div>
+        
+        <div ${i+1} class="DivText">
+        <h1>${item.texto}</h1>
+        <div>
+            <h1 class="DivTextH1">Ver mais</h1>
+        </div>
+        </div>
     </div>
   </a>  
   `;
