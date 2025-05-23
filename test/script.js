@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
             longDescription: 'A unha francesinha moderna reinventa o clássico com pontas coloridas, formatos inovadores ou detalhes artísticos. Perfeita para quem busca elegância com um toque de originalidade e personalização.',
             price: 'R$ 90,00',
             rating: 4, // out of 5
-            imagePreview: 'https://via.placeholder.com/100x75/FFC0CB/333?text=Francesinha',
-            imageDetail: 'https://via.placeholder.com/400x300/FFC0CB/333?text=Francesinha'
+            imagePreview: '../img/image (1).png',
+            imageDetail: '../img/image (1).png'
         },
         {
             id: 2,
@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
             longDescription: 'O design stiletto, são um dos formatos de unhas mais ousados e chamativos do momento. Seu formato cônico e ponta fina e aguçada alonga os dedos e confere às mãos uma aparência poderosa e sofisticada. A manutenção pode ser mais delicada, mas o impacto visual é inegável. Ideal para quem busca um visual marcante e cheio de personalidade.',
             price: 'R$ 150,00',
             rating: 5,
-            imagePreview: 'https://via.placeholder.com/100x75/E6E6FA/333?text=Stiletto',
-            imageDetail: 'https://via.placeholder.com/400x300/E6E6FA/333?text=Stiletto'
+            imagePreview: '../img/image (2).png',
+            imageDetail: '../img/image (2).png'
         },
         {
             id: 3,
@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
             longDescription: 'Unhas com design geométrico utilizam linhas, formas e padrões para criar um visual moderno e artístico. Podem variar de minimalistas a complexas, oferecendo inúmeras possibilidades de customização com cores e texturas.',
             price: 'R$ 120,00',
             rating: 4,
-            imagePreview: 'https://via.placeholder.com/100x75/B0E0E6/333?text=Geométrica',
-            imageDetail: 'https://via.placeholder.com/400x300/B0E0E6/333?text=Geométrica'
+            imagePreview: '../img/image (3).png',
+            imageDetail: '../img/image (3).png'
         }
     ];
 
