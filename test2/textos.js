@@ -13,8 +13,9 @@ imagens.forEach((item, i) => {
   html += `
 
   
+  <a href="${item.link}" class="conteudo">
     <div class="card">
-    <a href="${item.link}" >
+    
         <div><img src="${item.src}" alt=""></div>
         
         <div class="DivText">
@@ -26,9 +27,10 @@ imagens.forEach((item, i) => {
             <h1 class="DivTextH1">Ver mais</h1>
         </div>
         </div>
-         </a>  
+        
     </div>
- 
+   </a> 
+
  
   `;
 });
