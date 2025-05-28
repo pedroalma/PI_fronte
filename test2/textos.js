@@ -1,5 +1,3 @@
-// document.getElementById("imgj").innerHTML = `<img src="./img/image (1).png" alt="">`;
-// document.getElementById("h1j").innerHTML=`oal`;
 const imagens = [
   { link:"./testlink.html", src: "./img/image (1).png", titulo:"stiletto", texto: "O stiletto, sem dúvidas, é um dos formatos de unhas mais ousados e glamourosos do momento. Esse estilo é para aquelas que buscam por unhas bem pontudas e longas. É o queridinho de muitas celebridades como Rihanna, Cardi B e Nicki Minaj. O stiletto é para pessoas que queiram abusar da imaginação e investir em nail arts autênticas e diferentes, pois o formato em V abre espaço para diversas possibilidades de esmaltação. Esse formato de unha é pura atitude e destaca as mãos de qualquer pessoa." },
   { link:"./testlink.html", src: "./img/image (2).png", texto: "A unha bailarina, também conhecida como unha ballerina, tem esse nome porque o formato lembra uma sapatilha de balé. Possui as laterais afuniladas e pontas retas. Para conseguir esse formato de unha, fique atenta ao nível de resistência das suas unhas, pois além de unhas longas ainda apresentam cantinhos pontudos, sendo um fator a mais para levar a quebra da unha." },
@@ -13,23 +11,24 @@ imagens.forEach((item, i) => {
   html += `
 
   
-  <a href="${item.link}" class="conteudo">
-    <div class="card">
-    
-        <div><img src="${item.src}" alt=""></div>
-        
-        <div class="DivText">
-         <div class="h1-text">
-        <h1>${item.titulo}</h1>
-        <h1>${item.texto}</h1>
+  <div class="card">
+    <div>
+        <img src="${item.src}" alt="">
     </div>
+
+    <div class="DivText">
+        <div class="h1-text">
+            <h1>${item.titulo}</h1>
+            <h1>${item.texto}</h1>
+        </div>
+
         <div>
-            <h1 class="DivTextH1">Ver mais</h1>
+            <a href="${item.link}" class="conteudo">
+                <h1 class="DivTextH1">Ver mais</h1>
+            </a>
         </div>
-        </div>
-        
     </div>
-   </a> 
+</div>
 
  
   `;

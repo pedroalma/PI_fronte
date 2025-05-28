@@ -78,6 +78,11 @@ header{
     font-size: var(--tamanho-fonte-padrao);
     font-weight: 500;
 }
+#conteudo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .conteudo{
     text-decoration: none;
     color:#000000;
